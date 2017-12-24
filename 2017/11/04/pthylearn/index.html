@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/04/pthylearn/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="strat">
-<meta property="og:updated_time" content="2017-12-23T16:41:43.048Z">
+<meta property="og:updated_time" content="2017-12-24T08:47:15.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pythonlearn">
 <meta name="twitter:description" content="strat">
@@ -213,6 +213,8 @@
 <p>def now:<br>    print(‘2015-3-25’)</p>
 <p>f=now<br>f()<br>now.<strong>name</strong><br>f.<strong>name</strong></p>
 <p>def log(func):<br>    def wrapper(<em>args, **kw):<br>        print(‘call %s():’ % func.<strong>name</strong>)<br>        return func(</em>args, <strong>kw)<br>    return wrapper<br>@log<br>def now():<br>    print(‘2015-3-25’)<br>now()<br>def log(text):<br>    def decorator(func):<br>        def wrapper(*args, </strong>kw):<br>            print(‘%s %s():’ % (text, func.<strong>name</strong>))<br>            return func(<em>args, **kw)<br>        return wrapper<br>    return decorator<br>@log(‘execute’)<br>def now():<br>    print(‘2015-3-25’)<br>now=log(‘execute’)(now)<br>import functools<br>def log(func):<br>    @functools.wraps(func)<br>    def wrapper(</em>args, <strong>kw):<br>        print(‘call %s():’ % func.<strong>name</strong>)<br>        return func(*args, </strong>kw)<br>    return wrapper<br>import functools<br>def log(text):<br>    def decorator(func):<br>        @functools.wraps(func)<br>        def wrapper(<em>args, **kw):<br>            print(‘%s %s():’ % (text, func.<strong>name</strong>))<br>            return func(</em>args, <strong>kw)<br>        return wrapper<br>    return decorator<br>int(‘12345’)<br>int(‘12345’,base=8)<br>int(‘12345’,16)<br>def int2(x,base=2):<br>    return int(x,base)<br>int2(‘1000000’)<br>int2(‘1010101’)<br>import functools<br>int2=functools.partial(int,base=2)<br>int2(‘1000000’)<br>int2(‘1010101’)<br>int2(‘1000000’,base=10)<br>int2=functools.partial(int,base=2)<br>int2(‘10010’)<br>kw={‘base’:2}<br>int(‘10010’,</strong>kw)<br>max2=functools.partial(max,10)<br>max2(5,6,7)<br>args=(10,5,6,7)<br>max(*args)</p>
+<p>#!/usr/bin/env python3</p>
+<h1 id="coding-utf-8-7"><a href="#coding-utf-8-7" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>‘ a test module ‘<br><strong>author</strong> = ‘Michael Liao’<br>import sys<br>def test():<br>    args = sys.argv<br>    if len(args)==1:<br>        print(‘Hello, world!’)<br>    elif len(args)==2:<br>        print(‘Hello, %s!’ % args[1])<br>    else:<br>        print(‘Too many arguments!’)<br>if <strong>name</strong>==’<strong>main</strong>‘:<br>    test()<br>def _private_1(name):<br>    return ‘Hello, %s’ % name<br>def _private_2(name):<br>    return ‘Hi, %s’ % name<br>def greeting(name):<br>    if len(name) &gt; 3:<br>        return _private_1(name)<br>    else:<br>        return _private_2(name)<br>import numpy<br>import mymodule<br>import sys<br>sys.path<br>import sys<br>sys.path.append(‘/Users/michael/my_py_scripts’)</p>
 
       
 
